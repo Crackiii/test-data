@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    
+</body>
+<script>
+
+    var data = [
+        { "name":"Nadeem Ahmad", "age":39, "gender":"male" },
+        { "name":"Faisal Ahmad", "age":29, "gender":"female" },
+        { "name":"Saud Ahmad", "age":12, "gender":"male" },
+        { "name":"Ali Khan", "age":18, "gender":"female" },
+        { "name":"Smith", "age":36, "gender":"male" },
+        { "name":"Afridi", "age":45, "gender":"female" },
+        { "name":"Sami", "age":48, "gender":"male" },
+        { "name":"Jawad", "age":89, "gender":"female" },
+        { "name":"Fawad", "age":77, "gender":"male" },
+        { "name":"Azaz", "age":88, "gender":"female" },
+        { "name":"Atif", "age":54, "gender":"male" },
+        { "name":"Bilal", "age":23, "gender":"female" },
+        { "name":"Zwilal", "age":31, "gender":"male" },
+        { "name":"NAwaz", "age":47, "gender":"female" },
+        { "name":"Furqan", "age":29, "gender":"male" },
+        { "name":"Abrar", "age":93, "gender":"female" },
+        { "name":"Niaz", "age":50, "gender":"male" },
+        { "name":"Pacha", "age":40, "gender":"female" },
+        { "name":"Smooth", "age":30, "gender":"male" },
+        { "name":"Khay", "age":20, "gender":"female" },
+        { "name":"Alkhemi", "age":10, "gender":"male" },
+        { "name":"Jalal", "age":49, "gender":"female" },
+        { "name":"Twilio", "age":25, "gender":"female" },
+        { "name":"Gabreal", "age":34, "gender":"male" },
+        { "name":"Joseph", "age":76, "gender":"female" }
+    ]
+
+
+
+     var myFunction = (args) => {
+        var table  = document.querySelector("table tbody");
+        for (let i = 0; i < args.length; i++) {
+            if(args[i].age >= 30 && args[i].age <= 40){
+                table.insertAdjacentHTML("afterbegin", '<tr><td>'+args[i].name+'</td><td>'+args[i].age+'</td><td>'+args[i].gender+'</td><tr> ');
+            }
+        }
+         
+     }
+
+     myFunction(data);
+
+
+
+</script>
+</html>
